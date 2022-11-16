@@ -1,0 +1,133 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="165" name="Python" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="102">
+            <item index="0" class="java.lang.String" itemvalue="bs4" />
+            <item index="1" class="java.lang.String" itemvalue="rq-dashboard" />
+            <item index="2" class="java.lang.String" itemvalue="validators" />
+            <item index="3" class="java.lang.String" itemvalue="python-dateutil" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="5" class="java.lang.String" itemvalue="marshmallow" />
+            <item index="6" class="java.lang.String" itemvalue="html2text" />
+            <item index="7" class="java.lang.String" itemvalue="MarkupSafe" />
+            <item index="8" class="java.lang.String" itemvalue="polling" />
+            <item index="9" class="java.lang.String" itemvalue="feedparser" />
+            <item index="10" class="java.lang.String" itemvalue="redis" />
+            <item index="11" class="java.lang.String" itemvalue="twint" />
+            <item index="12" class="java.lang.String" itemvalue="flask-security-too" />
+            <item index="13" class="java.lang.String" itemvalue="ioc-finder" />
+            <item index="14" class="java.lang.String" itemvalue="lxml" />
+            <item index="15" class="java.lang.String" itemvalue="gevent" />
+            <item index="16" class="java.lang.String" itemvalue="uvloop" />
+            <item index="17" class="java.lang.String" itemvalue="dnspython" />
+            <item index="18" class="java.lang.String" itemvalue="fake_useragent" />
+            <item index="19" class="java.lang.String" itemvalue="werkzeug" />
+            <item index="20" class="java.lang.String" itemvalue="sqlalchemy-utils" />
+            <item index="21" class="java.lang.String" itemvalue="orjson" />
+            <item index="22" class="java.lang.String" itemvalue="html5print" />
+            <item index="23" class="java.lang.String" itemvalue="cronex" />
+            <item index="24" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="25" class="java.lang.String" itemvalue="click" />
+            <item index="26" class="java.lang.String" itemvalue="sqlalchemy" />
+            <item index="27" class="java.lang.String" itemvalue="vulners" />
+            <item index="28" class="java.lang.String" itemvalue="bcrypt" />
+            <item index="29" class="java.lang.String" itemvalue="psutil" />
+            <item index="30" class="java.lang.String" itemvalue="jinja2" />
+            <item index="31" class="java.lang.String" itemvalue="flask-limiter" />
+            <item index="32" class="java.lang.String" itemvalue="wafw00f" />
+            <item index="33" class="java.lang.String" itemvalue="requests-file" />
+            <item index="34" class="java.lang.String" itemvalue="cabby" />
+            <item index="35" class="java.lang.String" itemvalue="python-levenshtein" />
+            <item index="36" class="java.lang.String" itemvalue="flask" />
+            <item index="37" class="java.lang.String" itemvalue="twilio" />
+            <item index="38" class="java.lang.String" itemvalue="shodan" />
+            <item index="39" class="java.lang.String" itemvalue="cybox" />
+            <item index="40" class="java.lang.String" itemvalue="rq" />
+            <item index="41" class="java.lang.String" itemvalue="ioc-fanger" />
+            <item index="42" class="java.lang.String" itemvalue="flask-migrate" />
+            <item index="43" class="java.lang.String" itemvalue="webpage2html" />
+            <item index="44" class="java.lang.String" itemvalue="flask-httpauth" />
+            <item index="45" class="java.lang.String" itemvalue="pyqrcode" />
+            <item index="46" class="java.lang.String" itemvalue="mkdocs" />
+            <item index="47" class="java.lang.String" itemvalue="python-whois" />
+            <item index="48" class="java.lang.String" itemvalue="flask-caching" />
+            <item index="49" class="java.lang.String" itemvalue="pyasn1" />
+            <item index="50" class="java.lang.String" itemvalue="pyopenssl" />
+            <item index="51" class="java.lang.String" itemvalue="rq-scheduler" />
+            <item index="52" class="java.lang.String" itemvalue="flask-rq2" />
+            <item index="53" class="java.lang.String" itemvalue="requests-oauthlib" />
+            <item index="54" class="java.lang.String" itemvalue="selenium" />
+            <item index="55" class="java.lang.String" itemvalue="phonenumberslite" />
+            <item index="56" class="java.lang.String" itemvalue="netaddr" />
+            <item index="57" class="java.lang.String" itemvalue="tldextract" />
+            <item index="58" class="java.lang.String" itemvalue="itsdangerous" />
+            <item index="59" class="java.lang.String" itemvalue="marshmallow-sqlalchemy" />
+            <item index="60" class="java.lang.String" itemvalue="crowdstrike-falconpy" />
+            <item index="61" class="java.lang.String" itemvalue="stix" />
+            <item index="62" class="java.lang.String" itemvalue="wheel" />
+            <item index="63" class="java.lang.String" itemvalue="flask-sqlalchemy" />
+            <item index="64" class="java.lang.String" itemvalue="pytest-flask" />
+            <item index="65" class="java.lang.String" itemvalue="ipwhois" />
+            <item index="66" class="java.lang.String" itemvalue="twython" />
+            <item index="67" class="java.lang.String" itemvalue="xlsxwriter" />
+            <item index="68" class="java.lang.String" itemvalue="certstream" />
+            <item index="69" class="java.lang.String" itemvalue="timeout-decorator" />
+            <item index="70" class="java.lang.String" itemvalue="flask-marshmallow" />
+            <item index="71" class="java.lang.String" itemvalue="pdfplumber" />
+            <item index="72" class="java.lang.String" itemvalue="flask-mail" />
+            <item index="73" class="java.lang.String" itemvalue="email_validator" />
+            <item index="74" class="java.lang.String" itemvalue="flask-wtf" />
+            <item index="75" class="java.lang.String" itemvalue="aiohttp" />
+            <item index="76" class="java.lang.String" itemvalue="jsbeautifier" />
+            <item index="77" class="java.lang.String" itemvalue="bleach" />
+            <item index="78" class="java.lang.String" itemvalue="requests" />
+            <item index="79" class="java.lang.String" itemvalue="beautifulsoup4" />
+            <item index="80" class="java.lang.String" itemvalue="json2html" />
+            <item index="81" class="java.lang.String" itemvalue="xmlsec" />
+            <item index="82" class="java.lang.String" itemvalue="python3-saml" />
+            <item index="83" class="java.lang.String" itemvalue="expecttest" />
+            <item index="84" class="java.lang.String" itemvalue="types-dataclasses" />
+            <item index="85" class="java.lang.String" itemvalue="torch" />
+            <item index="86" class="java.lang.String" itemvalue="numpy" />
+            <item index="87" class="java.lang.String" itemvalue="WTForms" />
+            <item index="88" class="java.lang.String" itemvalue="apkleaks" />
+            <item index="89" class="java.lang.String" itemvalue="tqdm" />
+            <item index="90" class="java.lang.String" itemvalue="google-cloud-pubsub" />
+            <item index="91" class="java.lang.String" itemvalue="pyjwt" />
+            <item index="92" class="java.lang.String" itemvalue="zxcvbn" />
+            <item index="93" class="java.lang.String" itemvalue="Unidecode" />
+            <item index="94" class="java.lang.String" itemvalue="password-strength" />
+            <item index="95" class="java.lang.String" itemvalue="telethon" />
+            <item index="96" class="java.lang.String" itemvalue="html5lib" />
+            <item index="97" class="java.lang.String" itemvalue="flask-login" />
+            <item index="98" class="java.lang.String" itemvalue="isodate" />
+            <item index="99" class="java.lang.String" itemvalue="cachelib" />
+            <item index="100" class="java.lang.String" itemvalue="ua-parser" />
+            <item index="101" class="java.lang.String" itemvalue="transformers" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="bool.isnot" />
+          <option value="bool.is_" />
+          <option value="jarvis.src.models.classification.long_short_term_memory.lstm_model_ner.LSTM" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="SqlGotoInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlMissingColumnAliasesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlNamedArgumentsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
