@@ -2,9 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+    </script>
 </head>
-<body>
+<style>
 
+    /* from  W3 schools */
+    * {
+        box-sizing: border-box;
+    }
+
+    .card:hover {
+        -ms-transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        transform: scale(1.01);
+        box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    }
+
+    .column {
+        float: left;
+        width: 25%;
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .row {
+        margin: 0 -5px;
+        flex-direction: row;
+        justify-content: center;
+        display: flex;
+
+    }
+
+    .card {
+        background-color: #f1f1f1;
+        height: 100%;
+        width: 100%;
+        transition: transform .6s;
+        border-radius: 18px;
+        margin: 15px;
+    }
+
+    #mainBar {
+        text-align: center;
+        background-color: #26264f;
+        height: 100px;
+        margin-top: -20px;
+    }
+
+    #mainBarHeader {
+        color: orangered;
+        padding-top: 25px;
+        font-family: sans-serif;
+    }
+
+    #mainCardHeader {
+        padding: 10px;
+        color: orangered;
+        font-size: 28px;
+        font-family: sans-serif;
+    }
+
+    #mainCardIcon {
+        font-size: 50px;
+        color: orangered;
+        margin: 20px;
+    }
+
+    #cardTwoHeader {
+        padding: 10px;
+        color: #06c;
+        font-size: 28px;
+        font-family: sans-serif;
+    }
+
+    #imagePredictionSection {
+        margin-top: 20px;
+        margin-left: 10px;
+        display: none;
+    }
+
+
+    #cardTwoIcon {
+        font-size: 45px;
+        color: #06c;
+        margin: 20px;
+    }
+
+    #cardThreeHeader {
+        padding: 10px;
+        color: green;
+        font-size: 28px;
+        font-family: sans-serif;
+    }
+
+    #cardThreeIcon {
+        font-size: 45px;
+        color: green;
+        margin: 20px;
+    }
+
+    #imagePredictionButton {
+        color: #06c;
+        border-radius: 4px;
+        float: right;
+        margin-right: 10px;
+        border-color: #06c;
+    }
+
+    #inputFile {
+        color: #06c;
+        border-radius: 4px;
+        float: left;
+        margin-left: 10px;
+        border-color: #06c;
+    }
+
+    #textInput {
+        float: left;
+        margin-left: 10px;
+        border-radius: 4px;
+        border-color: green;
+        height: 75px;
+        width: 250px;
+        border-width: 2px;
+        font-family: sans-serif;
+    }
+
+    #textPredictionButton {
+        color: green;
+        border-radius: 4px;
+        float: right;
+        margin-right: 10px;
+        border-color: green;
+    }
+
+    #textPredictionSection {
+        display: none;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    #textLabel {
+        background-color: yellow;
+        padding: 2px;
+        border-radius: 4px;
+    }
+
+    #imageLabel {
+        background-color: yellow;
+        padding: 2px;
+        border-radius: 4px;
+        margin-bottom: 2px;
+    }
+
+    #imageInputSection {
+        margin-bottom: 50px;
+    }
+
+    #textInputSection {
+        margin-bottom: 50px;
+    }
+
+    #footer {
+        position: fixed;
+        padding: 10px 10px 0px 10px;
+        bottom: 0;
+        width: 100%;
+        height: 25px;
+        color: orangered;
+        font-family: sans-serif;
+        background-color: #26264f;
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+</style>
+<body style="background-color:#fff">
+<div id="mainBar"><h1 id="mainBarHeader">Fytorch Models Hub</h1></div>
+
+<div class="row">
+    <div class="column" style="width: 800px">
+        <div class="card">
+            <h1 id="mainCardHeader"><i id="mainCardIcon" class="fa fa-archive"></i>Welcome to Fytorch Models Hub</h1>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column">
+        <div class="card">
+            <h1 id="cardTwoHeader"><i id="cardTwoIcon" class="fa fa-bolt"></i>Predict Image Category</h1>
+            <div id="imageInputSection">
+                <input type="file" id="inputFile"/>
+                <button id="imagePredictionButton" >Classify Image</button>
+            </div>
+            <div id="imagePredictionSection">
+                <text>Prediction :
+                    <text id="imageLabel"></text>
+                </text>
+                <br> <br>
+                <text> Confidence :
+                    <text id="imageLabelConfidence"></text>
+                </text>
+            </div>
+
+        </div>
+    </div>
+    <div class="column">
+        <div class="card">
+            <h1 id="cardThreeHeader"><i id="cardThreeIcon" class="fa fa-smile-o"></i>Predict Your Text Here</h1>
+            <div id="textInputSection">
+                <textarea id="textInput"> </textarea>
+                <button  id="textPredictionButton">Classify Text</button>
+            </div>
+            <div id="textPredictionSection">
+                <text>Prediction :
+                    <text id="textLabel"></text>
+                </text>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    Fytorch Version 0.1
+</div>
 </body>
 </html>
+
