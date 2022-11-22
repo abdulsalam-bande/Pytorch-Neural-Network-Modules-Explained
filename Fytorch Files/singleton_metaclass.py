@@ -1,3 +1,4 @@
+## from https://python-course.eu/oop/metaclasses.php
 class SingletonMeta(type):
     _instances = {}
 
