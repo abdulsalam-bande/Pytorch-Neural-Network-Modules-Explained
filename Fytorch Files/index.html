@@ -6,12 +6,53 @@
     <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
+        function classifyImage() {
+            let formData = new FormData();
+            formData.append("file", $('#inputFile').prop('files')[0]);
+            $.ajax({
+                url: '/classify/image',
+                data: formData,
+                dataType: "JSON",
+                type: "PUT",
+                contentType: false,
+                processData: false,
+                beforeSend: function () {
+                    $('#imagePredictionButton').LoadingOverlay("show")
+                },
+                complete: function (return_data) {
+                    $('#imageLabel').html(return_data.responseJSON.data.label);
+                    $('#imageLabelConfidence').html(return_data.responseJSON.data.confidence);
+                    $('#imagePredictionSection').show();
+                    $('#imagePredictionButton').LoadingOverlay("hide");
+                },
 
+            });
+
+        }
+
+        function classifyText() {
+            let formData = {text: $("#textInput").val()};
+            $.ajax({
+                url: '/classify/text',
+                data: formData,
+                dataType: "JSON",
+                type: "GET",
+                beforeSend: function () {
+                    $('#textPredictionButton').LoadingOverlay("show")
+                },
+                complete: function (return_data) {
+                    $('#textLabel').html(return_data.responseJSON.data.label);
+                    $('#textPredictionSection').show();
+                    $('#textPredictionButton').LoadingOverlay("hide");
+                },
+
+            });
+        }
     </script>
 </head>
 <style>
 
-    /* from  W3 schools */
+    /* W3 schools */
     * {
         box-sizing: border-box;
     }
@@ -199,7 +240,7 @@
             <h1 id="cardTwoHeader"><i id="cardTwoIcon" class="fa fa-bolt"></i>Predict Image Category</h1>
             <div id="imageInputSection">
                 <input type="file" id="inputFile"/>
-                <button id="imagePredictionButton" >Classify Image</button>
+                <button id="imagePredictionButton" onclick="classifyImage()">Classify Image</button>
             </div>
             <div id="imagePredictionSection">
                 <text>Prediction :
@@ -218,7 +259,7 @@
             <h1 id="cardThreeHeader"><i id="cardThreeIcon" class="fa fa-smile-o"></i>Predict Your Text Here</h1>
             <div id="textInputSection">
                 <textarea id="textInput"> </textarea>
-                <button  id="textPredictionButton">Classify Text</button>
+                <button onclick="classifyText()" id="textPredictionButton">Classify Text</button>
             </div>
             <div id="textPredictionSection">
                 <text>Prediction :
